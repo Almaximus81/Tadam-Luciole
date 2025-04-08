@@ -53,6 +53,10 @@ const promptKeywords = [
   { text: "énergie", description: "Conseils pour gérer ton énergie" },
   { text: "gladiateur", description: "Mode gladiateur activé!" },
   { text: "micro-tâches", description: "Petites choses à faire" },
+  { text: "fun", description: "Pour rigoler" },
+  { text: "aléatoire", description: "Surprise!" },
+  { text: "tâche faite", description: "Célébration" },
+  { text: "encouragement", description: "Boost doux" },
 ];
 
 interface PedroChatbotProps {
@@ -90,14 +94,25 @@ export default function PedroChatbot({ isOpen, onClose }: PedroChatbotProps) {
     // Déterminer la catégorie de réponse basée sur les mots-clés
     let responseCategory = 'default';
     
-    if (input.toLowerCase().includes('motiv')) {
+    const inputLowerCase = input.toLowerCase();
+    
+    if (inputLowerCase.includes('motiv') || inputLowerCase.includes('encouragement')) {
       responseCategory = 'motivation';
-    } else if (input.toLowerCase().includes('bloqu') || input.toLowerCase().includes('stuck') || input.toLowerCase().includes('aide')) {
+    } else if (inputLowerCase.includes('bloqu') || inputLowerCase.includes('stuck') || inputLowerCase.includes('aide')) {
       responseCategory = 'stuck';
-    } else if (input.toLowerCase().includes('énergie') || input.toLowerCase().includes('fatigué') || input.toLowerCase().includes('fatigue')) {
+    } else if (inputLowerCase.includes('énergie') || inputLowerCase.includes('fatigué') || inputLowerCase.includes('fatigue')) {
       responseCategory = 'energy';
-    } else if (input.toLowerCase().includes('gladiat')) {
+    } else if (inputLowerCase.includes('gladiat') || inputLowerCase.includes('fun')) {
       responseCategory = 'gladiator';
+    } else if (inputLowerCase.includes('micro') || inputLowerCase.includes('tâche') || inputLowerCase.includes('petite')) {
+      responseCategory = 'microtasks';
+    } else if (inputLowerCase.includes('aléatoire')) {
+      // Pour les requêtes aléatoires, choisir une catégorie au hasard
+      const categories = ['motivation', 'stuck', 'energy', 'gladiator', 'microtasks'];
+      const randomCategoryIndex = Math.floor(Math.random() * categories.length);
+      responseCategory = categories[randomCategoryIndex];
+    } else if (inputLowerCase.includes('tâche faite') || inputLowerCase.includes('terminé') || inputLowerCase.includes('fini')) {
+      responseCategory = 'motivation'; // Utiliser les réponses de motivation pour les célébrations
     }
     
     // Sélectionner une réponse aléatoire de la catégorie appropriée
