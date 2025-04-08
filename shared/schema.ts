@@ -1,4 +1,4 @@
-import { pgTable, text, serial, integer, boolean, timestamp } from "drizzle-orm/pg-core";
+import { pgTable, text, serial, integer, boolean, timestamp, json } from "drizzle-orm/pg-core";
 import { createInsertSchema } from "drizzle-zod";
 import { z } from "zod";
 
@@ -45,6 +45,23 @@ export const easyTaskSuggestions = pgTable("easy_task_suggestions", {
   isActive: boolean("is_active").notNull().default(true),
 });
 
+export const congratsMessages = pgTable("congrats_messages", {
+  id: serial("id").primaryKey(),
+  userId: integer("user_id").references(() => users.id),
+  message: text("message").notNull(),
+  isActive: boolean("is_active").notNull().default(true),
+});
+
+export const strategies = pgTable("strategies", {
+  id: serial("id").primaryKey(),
+  userId: integer("user_id").references(() => users.id),
+  type: text("type").notNull(),
+  title: text("title").notNull(),
+  description: text("description").notNull(),
+  tip: text("tip").notNull(),
+  isActive: boolean("is_active").notNull().default(true),
+});
+
 // Insert schemas
 export const insertUserSchema = createInsertSchema(users).pick({
   username: true,
@@ -77,6 +94,19 @@ export const insertEasyTaskSuggestionSchema = createInsertSchema(easyTaskSuggest
   isActive: true,
 });
 
+export const insertCongratsMessageSchema = createInsertSchema(congratsMessages).pick({
+  message: true,
+  isActive: true,
+});
+
+export const insertStrategySchema = createInsertSchema(strategies).pick({
+  type: true,
+  title: true,
+  description: true,
+  tip: true,
+  isActive: true,
+});
+
 // Types
 export type InsertUser = z.infer<typeof insertUserSchema>;
 export type User = typeof users.$inferSelect;
@@ -92,3 +122,9 @@ export type MotivationalMessage = typeof motivationalMessages.$inferSelect;
 
 export type InsertEasyTaskSuggestion = z.infer<typeof insertEasyTaskSuggestionSchema>;
 export type EasyTaskSuggestion = typeof easyTaskSuggestions.$inferSelect;
+
+export type InsertCongratsMessage = z.infer<typeof insertCongratsMessageSchema>;
+export type CongratsMessage = typeof congratsMessages.$inferSelect;
+
+export type InsertStrategy = z.infer<typeof insertStrategySchema>;
+export type Strategy = typeof strategies.$inferSelect;

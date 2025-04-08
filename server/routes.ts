@@ -3,8 +3,12 @@ import { createServer, type Server } from "http";
 import { storage } from "./storage";
 import { z } from "zod";
 import { insertTaskSchema, insertUserSettingsSchema } from "@shared/schema";
+import adminRoutes from "./admin-routes";
 
 export async function registerRoutes(app: Express): Promise<Server> {
+  // Admin routes
+  app.use('/api/admin', adminRoutes);
+
   // API routes - prefix all routes with /api
   
   // Tasks endpoints
@@ -156,6 +160,41 @@ export async function registerRoutes(app: Express): Promise<Server> {
       res.json(suggestions);
     } catch (error) {
       res.status(500).json({ message: 'Failed to fetch easy task suggestions' });
+    }
+  });
+  
+  // Congrats messages endpoints
+  app.get('/api/congrats-messages', async (req, res) => {
+    try {
+      const messages = await storage.getCongratsMessages();
+      res.json(messages);
+    } catch (error) {
+      res.status(500).json({ message: 'Failed to fetch congrats messages' });
+    }
+  });
+  
+  // Strategies endpoints
+  app.get('/api/strategies', async (req, res) => {
+    try {
+      const strategies = await storage.getStrategies();
+      res.json(strategies);
+    } catch (error) {
+      res.status(500).json({ message: 'Failed to fetch strategies' });
+    }
+  });
+  
+  app.get('/api/strategies/:id', async (req, res) => {
+    try {
+      const id = parseInt(req.params.id);
+      const strategy = await storage.getStrategy(id);
+      
+      if (!strategy) {
+        return res.status(404).json({ message: 'Strategy not found' });
+      }
+      
+      res.json(strategy);
+    } catch (error) {
+      res.status(500).json({ message: 'Failed to fetch strategy' });
     }
   });
 
