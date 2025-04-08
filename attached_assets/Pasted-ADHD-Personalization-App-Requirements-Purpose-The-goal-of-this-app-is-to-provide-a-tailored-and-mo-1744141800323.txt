@@ -1,0 +1,79 @@
+ADHD Personalization App Requirements
+
+Purpose:
+The goal of this app is to provide a tailored and motivating tool for individuals with ADHD, specifically addressing their need for task management, motivational support, and energy tracking in a colorful and dynamic interface.
+Key Features:
+
+    Task Management:
+
+        Customizable Tasks:
+        Users can create personalized tasks, with the option to adjust the difficulty and duration to match their energy levels.
+
+        Energy Level Control:
+        Each task should have a customizable "energy cost," which adjusts based on the task's difficulty, helping users track and manage their energy throughout the day.
+
+        Easy Tasks Suggestion:
+        Upon opening the app, a simple, easy-to-complete task should be suggested to help users get started. This task should feel approachable and achievable.
+
+    Motivational Elements:
+
+        Personalized Motivational Messages:
+        The app will display motivational quotes or phrases tailored to the user's preferences or goals. These messages will be displayed dynamically to keep users encouraged.
+
+        Dynamic Visual Feedback:
+        Include visual feedback such as animations or progress bars to keep users engaged. For example, a gauge showing energy levels or task progress could be animated in real-time.
+
+        Celebratory Messages:
+        After completing a task or reaching milestones, users will be greeted with personalized congratulatory messages to reinforce positive behavior and boost morale.
+
+    Task Progress Tracking:
+
+        Task Completion Tracking:
+        As users complete tasks, their progress should be logged. This can include a percentage of completion or a visual indicator of tasks finished for the day.
+
+    Support for Task Blockage:
+
+        Strategies for Getting Unstuck:
+        In case a user gets stuck or overwhelmed, the app should suggest specific strategies to help them refocus. This might include breaking down the task further or providing a short, motivational break suggestion.
+
+    Design Aesthetic:
+
+        Color Palette:
+        Use a vibrant and colorful palette, including turquoise, teal, yellow, and purple, to make the app feel light, fun, and motivating.
+
+        Dynamic Visuals:
+        Include effects such as progress bars, task transitions, and visual celebrations when tasks are completed. These effects should be designed to create a sense of flow and accomplishment.
+
+        Friendly and Fun Interface:
+        The overall design should feel friendly, lighthearted, and fun, encouraging users to interact and engage with the app without feeling overwhelmed.
+
+    Optional Chatbot Feature:
+
+        Motivational Chatbot:
+        A chatbot feature that offers dynamic conversations designed to motivate users. The chatbot should offer personalized suggestions, help with managing tasks, and encourage users with jokes or positive affirmations to reduce stress and keep the experience engaging.
+
+Development Framework:
+
+    Frontend (HTML/CSS/JS):
+
+        The app will be built using HTML, CSS, and JavaScript. Replit will be used for developing and testing the app in an online code editor.
+
+    Features to Implement:
+
+        Task creation and management (with customizable energy cost)
+
+        Energy tracking system (visual feedback such as bars or gauges)
+
+        Personalized motivational messaging
+
+        Simple task suggestion for quick wins
+
+        Task progress tracking with visual completion indicators
+
+        Dynamic congratulatory messages
+
+        Strategies for overcoming blockages (e.g., motivational breaks)
+
+        Friendly, vibrant, and dynamic design (colors and animations)
+
+        Chatbot integration (optional)
