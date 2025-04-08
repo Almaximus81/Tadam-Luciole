@@ -19,7 +19,7 @@ export default function StrategyModal({ type, onClose }: StrategyModalProps) {
   useEffect(() => {
     if (type === 'break') {
       setDetails({
-        title: 'Take a Short Break',
+        title: 'Prendre une Courte Pause',
         icon: (
           <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-primary mr-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
             <path d="M17 8h1a4 4 0 1 1 0 8h-1"></path>
@@ -28,21 +28,21 @@ export default function StrategyModal({ type, onClose }: StrategyModalProps) {
         ),
         description: (
           <>
-            <p className="mb-3">Sometimes a quick break is all you need to reset your focus. Here's how to make it effective:</p>
+            <p className="mb-3">Parfois, une pause rapide est tout ce dont tu as besoin pour retrouver ta concentration. Voici comment la rendre efficace :</p>
             <ul className="list-disc pl-5 space-y-2">
-              <li>Set a timer for 5 minutes</li>
-              <li>Step away from your desk</li>
-              <li>Drink some water</li>
-              <li>Take a few deep breaths</li>
-              <li>Return with a refreshed perspective</li>
+              <li>Règle une minuterie pour 5 minutes</li>
+              <li>Éloigne-toi de ton bureau</li>
+              <li>Bois un peu d'eau</li>
+              <li>Prends quelques respirations profondes</li>
+              <li>Reviens avec une perspective rafraîchie</li>
             </ul>
           </>
         ),
-        tip: "Short breaks can increase productivity by up to 20%. Your brain needs these pauses to process information effectively."
+        tip: "Les pauses courtes peuvent augmenter la productivité jusqu'à 20%. Ton cerveau a besoin de ces moments pour traiter efficacement l'information."
       });
     } else if (type === 'smaller') {
       setDetails({
-        title: 'Break It Down',
+        title: 'Découper en Petites Étapes',
         icon: (
           <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-secondary mr-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
             <circle cx="6" cy="6" r="3"></circle>
@@ -52,21 +52,21 @@ export default function StrategyModal({ type, onClose }: StrategyModalProps) {
         ),
         description: (
           <>
-            <p className="mb-3">Large tasks can feel overwhelming. Try breaking it down into tiny steps:</p>
+            <p className="mb-3">Les grandes tâches peuvent sembler écrasantes. Essaie de les décomposer en petites étapes :</p>
             <ul className="list-disc pl-5 space-y-2">
-              <li>Identify the smallest possible first action</li>
-              <li>Set a timer for just 5 minutes of work</li>
-              <li>Focus only on that one small step</li>
-              <li>Celebrate completing each mini-step</li>
-              <li>Continue with the next small piece</li>
+              <li>Identifie la plus petite première action possible</li>
+              <li>Règle une minuterie pour seulement 5 minutes de travail</li>
+              <li>Concentre-toi uniquement sur cette petite étape</li>
+              <li>Célèbre la réalisation de chaque mini-étape</li>
+              <li>Continue avec le morceau suivant</li>
             </ul>
           </>
         ),
-        tip: "For ADHD brains, starting is often the hardest part. Once you begin with a tiny step, momentum builds naturally."
+        tip: "Pour les cerveaux TDAH, commencer est souvent la partie la plus difficile. Une fois que tu débutes par une petite étape, l'élan se construit naturellement."
       });
     } else if (type === 'different') {
       setDetails({
-        title: 'Switch Tasks',
+        title: 'Changer de Tâche',
         icon: (
           <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-accent-dark mr-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
             <path d="M7 16V4M7 4L3 8M7 4L11 8"></path>
@@ -75,17 +75,17 @@ export default function StrategyModal({ type, onClose }: StrategyModalProps) {
         ),
         description: (
           <>
-            <p className="mb-3">Sometimes your brain needs variety. It's OK to switch to a different task temporarily:</p>
+            <p className="mb-3">Parfois, ton cerveau a besoin de variété. C'est OK de passer temporairement à une tâche différente :</p>
             <ul className="list-disc pl-5 space-y-2">
-              <li>Choose a different task from your list</li>
-              <li>Preferably one that uses different mental skills</li>
-              <li>Work on it for 15-20 minutes</li>
-              <li>Use the momentum to return to the original task</li>
-              <li>Or continue with the new task if you're in flow</li>
+              <li>Choisis une tâche différente de ta liste</li>
+              <li>De préférence une qui utilise des compétences mentales différentes</li>
+              <li>Travaille dessus pendant 15-20 minutes</li>
+              <li>Utilise cet élan pour revenir à la tâche originale</li>
+              <li>Ou continue avec la nouvelle tâche si tu es dans le flow</li>
             </ul>
           </>
         ),
-        tip: "Task switching can be strategic for ADHD brains. Your goal is productivity overall, not forcing yourself through a single task when stuck."
+        tip: "Le changement de tâche peut être stratégique pour les cerveaux TDAH. Ton objectif est la productivité globale, pas de te forcer à accomplir une seule tâche quand tu es bloqué."
       });
     }
   }, [type]);
@@ -127,7 +127,7 @@ export default function StrategyModal({ type, onClose }: StrategyModalProps) {
             onClick={onClose}
             className="flex-1 py-3 bg-primary hover:bg-primary-dark text-white font-semibold rounded-md transition-colors"
           >
-            Try This Now
+            Essayer Maintenant
           </motion.button>
           <motion.button
             whileHover={{ scale: 1.03 }}
@@ -135,7 +135,7 @@ export default function StrategyModal({ type, onClose }: StrategyModalProps) {
             onClick={onClose}
             className="py-3 px-4 bg-neutral-100 hover:bg-neutral-200 text-neutral-700 font-semibold rounded-md transition-colors"
           >
-            Close
+            Fermer
           </motion.button>
         </div>
       </motion.div>

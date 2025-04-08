@@ -47,7 +47,7 @@ export default function MotivationalMessage() {
             </svg>
           </div>
           <div>
-            <h3 className="font-semibold text-lg text-neutral-800 mb-1">Here's a boost!</h3>
+            <h3 className="font-semibold text-lg text-neutral-800 mb-1">Un peu de motivation !</h3>
             <p className="text-neutral-600">{currentMessage}</p>
           </div>
           <button 
