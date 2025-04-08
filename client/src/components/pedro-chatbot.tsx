@@ -12,24 +12,37 @@ const pedroResponses = {
     "Hé ! C'est Pedro. Qu'est-ce qu'on fait aujourd'hui ?"
   ],
   motivation: [
-    "Tu fais un travail formidable ! Continue comme ça !",
-    "Chaque petite étape compte. Je suis fier de toi !",
-    "N'oublie pas : tu es capable de grandes choses, même quand c'est difficile !"
+    "Aujourd'hui, tu es Maximus Alma Meridius… sauf que toi, tu combats une pile de linge sale, du désordre et des objets disséminés partout. Gloire à toi !",
+    "Tu n'as pas à tout faire… Juste une première mini action. Et boum : combo de bravoure activé.",
+    "Ta mission, si tu l'acceptes : ne pas fuir. Juste ouvrir, faire une petite chose et oser commencer.",
+    "L'avenir appartient à ceux qui... respirent un bon coup et se motivent avec Pedro.",
+    "Pedro a vu ton potentiel. Et il a dit : 'Cette personne est une légende en devenir.'",
+    "Tu sais ce que Maximus ferait ? Il soufflerait fort… et il ferait une tâche domestique. Si, si !"
   ],
   stuck: [
-    "Bloqué(e) ? Essaie de diviser ta tâche en étapes plus petites.",
-    "Parfois, prendre une courte pause de 5 minutes peut aider à relancer ton cerveau.",
-    "Rappelle-toi la technique Pomodoro : 25 minutes de travail, puis une pause."
+    "Si tu n'arrives pas à tout faire… FAIS JUSTE LE TRUC LE PLUS FACILE. Et reviens vers Pedro pour une standing ovation imaginaire.",
+    "N'aie pas peur. Même les tirones ont commencé par nettoyer la boue de leur tentorium !",
+    "Rappelle-toi : même un canard qui rame à l'envers est plus avancé que celui qui reste sur la berge."
   ],
   energy: [
-    "Ton énergie est basse ? C'est normal. Prends soin de toi et fais une activité qui te ressource.",
-    "N'oublie pas de t'hydrater et de faire quelques étirements !",
-    "Parfois, il faut savoir s'écouter et se reposer. Demain est un autre jour !"
+    "Ton niveau d'énergie est à 3 ? Parfait. C'est un nombre magique. Comme les trios de sorcières ou les tacos par portion.",
+    "Tu es comme une pile rechargeable : commence par brancher ton courage, le reste suivra.",
+    "Tu n'es pas paresseux·se. Tu es un stratège de l'effort sélectif. Pedro valide.",
+    "On n'est pas ici pour être parfait. On est ici pour avancer avec panache et un poil de café.",
+    "Tu crois être petit·e ? Pedro te voit comme un·e géant·e qui a juste un petit bug temporaire de démarrage."
   ],
   gladiator: [
+    "Je sais, les tâches domestiques, c'est pas Commode. Haha ! Commode ! Tu l'as ? Bon, ok, on se met au travail, soldat !",
     "Es-tu prêt(e) à conquérir tes tâches aujourd'hui, gladiateur ?",
     "La gloire t'attend au-delà de ta liste de tâches !",
     "Ce qui se passe dans ta liste de tâches... se répercute dans ta vie !"
+  ],
+  microtasks: [
+    "Un petit pas pour toi, un grand pas pour ta crédibilité d'adulte fonctionnel.",
+    "Range 3 trucs et tu seras promu·e Capitaine de la Légion de la Propreté Suprême.",
+    "Range un objet. Tu gagneras +10 en dignité et +3 en fierté intérieure. Et si tu en ranges 5 tu seras carrément une légende !",
+    "Maximus avait une épée. Toi, t'as un balai, du aspiro robot ou une éponge… Chacun est une arme pour établir fièrement ta légende moderne.",
+    "La motivation vient en marchant. Ou en dansant. Peu importe, du moment que tu réunis les chaussettes orphelines."
   ]
 };
 
@@ -39,6 +52,7 @@ const promptKeywords = [
   { text: "bloqué", description: "Aide quand tu es bloqué" },
   { text: "énergie", description: "Conseils pour gérer ton énergie" },
   { text: "gladiateur", description: "Mode gladiateur activé!" },
+  { text: "micro-tâches", description: "Petites choses à faire" },
 ];
 
 interface PedroChatbotProps {
