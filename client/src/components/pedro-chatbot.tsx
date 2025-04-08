@@ -135,30 +135,30 @@ export default function PedroChatbot({ isOpen, onClose }: PedroChatbotProps) {
   if (!isOpen) return null;
 
   return (
-    <div className="fixed bottom-6 right-6 w-80 max-h-[500px] bg-white rounded-lg shadow-xl overflow-hidden z-50 flex flex-col">
-      <div className="bg-primary p-3 flex justify-between items-center text-white">
-        <div className="flex items-center space-x-2">
-          <img src={pedroImage} alt="Pedro" className="w-8 h-8 rounded-full" />
-          <h3 className="font-bold">Pedro</h3>
+    <div className="fixed bottom-6 right-6 w-96 max-h-[550px] bg-white rounded-lg shadow-xl overflow-hidden z-50 flex flex-col">
+      <div className="bg-primary p-4 flex justify-between items-center text-white">
+        <div className="flex items-center space-x-3">
+          <img src={pedroImage} alt="Pedro" className="w-12 h-12 rounded-full border-2 border-white" />
+          <h3 className="font-bold text-lg">Pedro</h3>
         </div>
         <Button 
           variant="ghost" 
           size="sm" 
           onClick={onClose} 
-          className="h-6 w-6 p-0 text-white hover:bg-primary-dark"
+          className="h-8 w-8 p-0 text-white hover:bg-primary-dark"
         >
           ✕
         </Button>
       </div>
       
-      <div className="flex-1 overflow-y-auto p-3 max-h-[320px] bg-slate-50">
+      <div className="flex-1 overflow-y-auto p-4 max-h-[380px] bg-slate-50">
         {messages.map((msg, index) => (
           <div 
             key={index} 
             className={`mb-2 ${msg.sender === 'user' ? 'text-right' : 'text-left'}`}
           >
             <div 
-              className={`inline-block px-3 py-2 rounded-lg max-w-[80%] ${
+              className={`inline-block px-4 py-3 rounded-lg max-w-[85%] text-base ${
                 msg.sender === 'user' 
                   ? 'bg-primary text-white' 
                   : 'bg-white border border-gray-200'
@@ -172,19 +172,19 @@ export default function PedroChatbot({ isOpen, onClose }: PedroChatbotProps) {
       </div>
       
       {showPrompts && (
-        <div className="bg-white p-2 border-t border-gray-200">
-          <p className="text-sm text-gray-500 mb-2">Suggestions:</p>
-          <div className="flex flex-wrap gap-1">
+        <div className="bg-white p-3 border-t border-gray-200">
+          <p className="text-sm text-gray-600 mb-2 font-medium">Suggestions :</p>
+          <div className="flex flex-wrap gap-2">
             {promptKeywords.map((keyword, index) => (
               <Button 
                 key={index} 
                 variant="outline" 
                 size="sm" 
                 onClick={() => handlePromptClick(keyword.text)}
-                className="text-xs"
+                className="text-xs py-1 px-2 rounded-md hover:bg-primary hover:text-white transition-colors"
               >
                 {keyword.text}
-                <span className="text-xs text-gray-400 ml-1">({keyword.description})</span>
+                <span className="text-xs text-gray-500 ml-1">({keyword.description})</span>
               </Button>
             ))}
           </div>

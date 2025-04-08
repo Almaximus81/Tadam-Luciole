@@ -115,7 +115,7 @@ export default function EasyTaskSuggestion() {
             </svg>
           </div>
           <div className="flex-1">
-            <h3 className="font-semibold text-lg mb-1">Quick Win Suggestion</h3>
+            <h3 className="font-semibold text-lg mb-1">Une tâche rapide et facile</h3>
             <p className="text-white/90 mb-3">{currentSuggestion}</p>
             <div className="flex flex-wrap gap-2">
               <button 
@@ -131,7 +131,7 @@ export default function EasyTaskSuggestion() {
                     <line x1="5" y1="12" x2="19" y2="12"></line>
                   </svg>
                 )}
-                Add to Tasks
+                Ajouter aux tâches
               </button>
               <button 
                 onClick={handleCompleteTask}
@@ -145,7 +145,7 @@ export default function EasyTaskSuggestion() {
                     <polyline points="20 6 9 17 4 12"></polyline>
                   </svg>
                 )}
-                I Did This!
+                C'est fait !
               </button>
             </div>
           </div>

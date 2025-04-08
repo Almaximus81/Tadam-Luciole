@@ -1,89 +1,89 @@
 // Default motivational messages
 export const defaultMotivationalMessages = [
-  "Remember: Small steps are still progress. You've got this!",
-  "Your effort today shapes your success tomorrow.",
-  "Focus on progress, not perfection.",
-  "You don't have to be perfect to be amazing.",
-  "Each task you complete is a victory worth celebrating!",
-  "Start where you are, use what you have, do what you can.",
-  "The hardest part is starting. Just take that first step.",
-  "You're not behind. You're exactly where you need to be.",
-  "Don't compare your chapter 1 to someone else's chapter 20.",
-  "Celebrate small wins - they add up to big victories!"
+  "Souviens-toi : Les petits pas sont quand même des progrès. Tu peux le faire !",
+  "Tes efforts d'aujourd'hui façonnent ton succès de demain.",
+  "Concentre-toi sur les progrès, pas sur la perfection.",
+  "Tu n'as pas besoin d'être parfait pour être génial.",
+  "Chaque tâche que tu accomplis est une victoire qui mérite d'être célébrée !",
+  "Commence là où tu es, utilise ce que tu as, fais ce que tu peux.",
+  "La partie la plus difficile est de commencer. Fais juste ce premier pas.",
+  "Tu n'es pas en retard. Tu es exactement là où tu dois être.",
+  "Ne compare pas ton chapitre 1 au chapitre 20 de quelqu'un d'autre.",
+  "Célèbre les petites victoires - elles s'additionnent pour former de grandes réussites !"
 ];
 
 // Default easy task suggestions
 export const defaultEasyTaskSuggestions = [
-  "Take 2 minutes to clear your desk space",
-  "Fill up your water bottle",
-  "Write down your top 3 priorities for today",
-  "Stretch for 1 minute",
-  "Send that quick email you've been putting off",
-  "Sort through 5 papers on your desk",
-  "Take 3 deep breaths",
-  "Set a timer for a 5-minute focused sprint",
-  "Organize your digital desktop",
-  "Text a friend or family member",
-  "Stand up and do 10 jumping jacks",
-  "Write down one thing you're grateful for"
+  "Prends 2 minutes pour dégager ton espace de travail",
+  "Remplis ta bouteille d'eau",
+  "Note tes 3 priorités du jour",
+  "Étire-toi pendant 1 minute",
+  "Envoie ce petit email que tu repousses",
+  "Trie 5 papiers sur ton bureau",
+  "Prends 3 respirations profondes",
+  "Programme un chronomètre pour 5 minutes de concentration",
+  "Organise ton bureau virtuel",
+  "Envoie un message à un ami ou un membre de ta famille",
+  "Lève-toi et fais 10 jumping jacks",
+  "Note une chose pour laquelle tu es reconnaissant(e)"
 ];
 
 // Strategy details
 export const strategies = {
   break: {
-    title: 'Take a Short Break',
+    title: 'Prendre une Courte Pause',
     description: `
-      <p class="mb-3">Sometimes a quick break is all you need to reset your focus. Here's how to make it effective:</p>
+      <p class="mb-3">Parfois, une pause rapide est tout ce dont tu as besoin pour retrouver ta concentration. Voici comment la rendre efficace :</p>
       <ul class="list-disc pl-5 space-y-2">
-        <li>Set a timer for 5 minutes</li>
-        <li>Step away from your desk</li>
-        <li>Drink some water</li>
-        <li>Take a few deep breaths</li>
-        <li>Return with a refreshed perspective</li>
+        <li>Règle une minuterie pour 5 minutes</li>
+        <li>Éloigne-toi de ton bureau</li>
+        <li>Bois un peu d'eau</li>
+        <li>Prends quelques respirations profondes</li>
+        <li>Reviens avec une perspective rafraîchie</li>
       </ul>
     `,
-    tip: "Short breaks can increase productivity by up to 20%. Your brain needs these pauses to process information effectively."
+    tip: "Les pauses courtes peuvent augmenter la productivité jusqu'à 20%. Ton cerveau a besoin de ces moments pour traiter efficacement l'information."
   },
   smaller: {
-    title: 'Break It Down',
+    title: 'Découper en Petites Étapes',
     description: `
-      <p class="mb-3">Large tasks can feel overwhelming. Try breaking it down into tiny steps:</p>
+      <p class="mb-3">Les grandes tâches peuvent sembler écrasantes. Essaie de les décomposer en petites étapes :</p>
       <ul class="list-disc pl-5 space-y-2">
-        <li>Identify the smallest possible first action</li>
-        <li>Set a timer for just 5 minutes of work</li>
-        <li>Focus only on that one small step</li>
-        <li>Celebrate completing each mini-step</li>
-        <li>Continue with the next small piece</li>
+        <li>Identifie la plus petite première action possible</li>
+        <li>Règle une minuterie pour seulement 5 minutes de travail</li>
+        <li>Concentre-toi uniquement sur cette petite étape</li>
+        <li>Célèbre la réalisation de chaque mini-étape</li>
+        <li>Continue avec le morceau suivant</li>
       </ul>
     `,
-    tip: "For ADHD brains, starting is often the hardest part. Once you begin with a tiny step, momentum builds naturally."
+    tip: "Pour les cerveaux TDAH, commencer est souvent la partie la plus difficile. Une fois que tu débutes par une petite étape, l'élan se construit naturellement."
   },
   different: {
-    title: 'Switch Tasks',
+    title: 'Changer de Tâche',
     description: `
-      <p class="mb-3">Sometimes your brain needs variety. It's OK to switch to a different task temporarily:</p>
+      <p class="mb-3">Parfois, ton cerveau a besoin de variété. C'est OK de passer temporairement à une tâche différente :</p>
       <ul class="list-disc pl-5 space-y-2">
-        <li>Choose a different task from your list</li>
-        <li>Preferably one that uses different mental skills</li>
-        <li>Work on it for 15-20 minutes</li>
-        <li>Use the momentum to return to the original task</li>
-        <li>Or continue with the new task if you're in flow</li>
+        <li>Choisis une tâche différente de ta liste</li>
+        <li>De préférence une qui utilise des compétences mentales différentes</li>
+        <li>Travaille dessus pendant 15-20 minutes</li>
+        <li>Utilise cet élan pour revenir à la tâche originale</li>
+        <li>Ou continue avec la nouvelle tâche si tu es dans le flow</li>
       </ul>
     `,
-    tip: "Task switching can be strategic for ADHD brains. Your goal is productivity overall, not forcing yourself through a single task when stuck."
+    tip: "Le changement de tâche peut être stratégique pour les cerveaux TDAH. Ton objectif est la productivité globale, pas de te forcer à accomplir une seule tâche quand tu es bloqué."
   }
 };
 
 // Congratulatory messages
 export const congratsMessages = [
-  "Great job!",
-  "Awesome work!",
-  "You did it!",
-  "Way to go!",
-  "Task crushed!",
-  "Nice one!",
-  "Fantastic!",
-  "Well done!",
-  "Perfect!",
-  "Brilliant work!"
+  "Excellent travail !",
+  "Super boulot !",
+  "Tu l'as fait !",
+  "Continue comme ça !",
+  "Tâche écrasée !",
+  "Bien joué !",
+  "Fantastique !",
+  "Bravo !",
+  "Parfait !",
+  "Brillant !"
 ];
