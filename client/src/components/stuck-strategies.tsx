@@ -14,7 +14,7 @@ export default function StuckStrategies({ onStrategySelect }: StuckStrategiesPro
           <path d="M9 9h.01"></path>
           <path d="M15 9h.01"></path>
         </svg>
-        Feeling Stuck?
+        Tu es bloqué ?
       </h2>
       
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -28,8 +28,8 @@ export default function StuckStrategies({ onStrategySelect }: StuckStrategiesPro
             <path d="M17 8h1a4 4 0 1 1 0 8h-1"></path>
             <path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4z"></path>
           </svg>
-          <span className="font-medium text-neutral-700">Take a Short Break</span>
-          <p className="text-sm text-neutral-500 mt-1">5 min reset to refresh your mind</p>
+          <span className="font-medium text-neutral-700">Faire une Pause</span>
+          <p className="text-sm text-neutral-500 mt-1">5 min pour rafraîchir ton esprit</p>
         </motion.button>
         
         <motion.button
@@ -43,8 +43,8 @@ export default function StuckStrategies({ onStrategySelect }: StuckStrategiesPro
             <circle cx="6" cy="18" r="3"></circle>
             <path d="M20 4L8.12 15.88M14.47 14.48L20 20M8.12 8.12L12 12"></path>
           </svg>
-          <span className="font-medium text-neutral-700">Break It Down</span>
-          <p className="text-sm text-neutral-500 mt-1">Split your task into smaller steps</p>
+          <span className="font-medium text-neutral-700">Décomposer la Tâche</span>
+          <p className="text-sm text-neutral-500 mt-1">Divise ta tâche en petites étapes</p>
         </motion.button>
         
         <motion.button
@@ -57,8 +57,8 @@ export default function StuckStrategies({ onStrategySelect }: StuckStrategiesPro
             <path d="M7 16V4M7 4L3 8M7 4L11 8"></path>
             <path d="M17 8v12M17 20l4-4M17 20l-4-4"></path>
           </svg>
-          <span className="font-medium text-neutral-700">Switch Tasks</span>
-          <p className="text-sm text-neutral-500 mt-1">Work on something else for a while</p>
+          <span className="font-medium text-neutral-700">Changer de Tâche</span>
+          <p className="text-sm text-neutral-500 mt-1">Travaille sur autre chose pendant un moment</p>
         </motion.button>
       </div>
     </div>

@@ -54,7 +54,7 @@ export default function Home() {
         <div className="container mx-auto flex justify-between items-center">
           <div className="flex items-center">
             <Focus className="text-white mr-2 h-7 w-7" />
-            <h1 className="text-white font-bold text-2xl">FocusFlow</h1>
+            <h1 className="text-white font-bold text-2xl">Luciole</h1>
           </div>
           
           <div className="flex items-center">

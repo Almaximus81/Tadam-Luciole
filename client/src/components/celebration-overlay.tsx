@@ -18,12 +18,12 @@ export default function CelebrationOverlay({
   
   // Generate random congratulatory message
   const congratsMessages = [
-    "Great job!",
-    "Awesome work!",
-    "You did it!",
-    "Way to go!",
-    "Task crushed!",
-    "Nice one!"
+    "Excellent travail !",
+    "Super boulot !",
+    "Tu l'as fait !",
+    "Bravo !",
+    "Tâche accomplie !",
+    "Bien joué !"
   ];
   
   const randomMessage = congratsMessages[Math.floor(Math.random() * congratsMessages.length)];
@@ -77,7 +77,7 @@ export default function CelebrationOverlay({
         <h2 className="text-2xl font-bold text-neutral-800 mb-2">{randomMessage}</h2>
         
         <p className="text-neutral-600 mb-4">
-          You've completed "{taskName}"! That's {energyCost}% energy well spent.
+          Tu as terminé "{taskName}" ! C'est {energyCost}% d'énergie bien utilisée.
         </p>
         
         <div className="energy-update flex items-center justify-center p-3 bg-primary-light/10 rounded-lg mb-4">
@@ -86,7 +86,7 @@ export default function CelebrationOverlay({
             <rect x="9" y="11" width="6" height="8" rx="1"></rect>
           </svg>
           <span className="text-primary-dark font-medium">
-            Energy remaining: {currentEnergy}%
+            Énergie restante : {currentEnergy}%
           </span>
         </div>
         
@@ -96,7 +96,7 @@ export default function CelebrationOverlay({
           onClick={onClose}
           className="w-full py-3 bg-accent hover:bg-accent-dark text-neutral-800 font-semibold rounded-md transition-colors"
         >
-          Keep Going!
+          Continue comme ça !
         </motion.button>
         
         <div 

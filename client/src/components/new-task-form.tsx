@@ -26,7 +26,7 @@ import {
 } from "@/components/ui/select";
 
 const formSchema = insertTaskSchema.extend({
-  name: z.string().min(1, "Task name is required"),
+  name: z.string().min(1, "Le nom de la tâche est requis"),
 });
 
 type FormValues = z.infer<typeof formSchema>;
@@ -67,13 +67,13 @@ export default function NewTaskForm() {
       form.reset();
       setSelectedDifficulty(1);
       toast({
-        title: "Task created",
-        description: "Your new task has been added to the list."
+        title: "Tâche créée",
+        description: "Votre nouvelle tâche a été ajoutée à la liste."
       });
     },
     onError: (error) => {
       toast({
-        title: "Failed to create task",
+        title: "Erreur de création de tâche",
         description: `${error}`,
         variant: "destructive"
       });
@@ -92,7 +92,7 @@ export default function NewTaskForm() {
           <line x1="12" y1="8" x2="12" y2="16"></line>
           <line x1="8" y1="12" x2="16" y2="12"></line>
         </svg>
-        Add New Task
+        Ajouter une Tâche
       </h2>
       
       <Form {...form}>
@@ -102,10 +102,10 @@ export default function NewTaskForm() {
             name="name"
             render={({ field }) => (
               <FormItem>
-                <FormLabel className="text-neutral-600">Task Name</FormLabel>
+                <FormLabel className="text-neutral-600">Nom de la Tâche</FormLabel>
                 <FormControl>
                   <Input
-                    placeholder="What do you need to do?"
+                    placeholder="Que devez-vous faire ?"
                     {...field}
                     className="w-full px-3 py-2 border border-neutral-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
                   />
@@ -120,7 +120,7 @@ export default function NewTaskForm() {
             name="difficulty"
             render={({ field }) => (
               <FormItem>
-                <FormLabel className="text-neutral-600">Difficulty Level</FormLabel>
+                <FormLabel className="text-neutral-600">Niveau de Difficulté</FormLabel>
                 <div className="flex space-x-2">
                   {[1, 2, 3].map((level) => (
                     <Button
@@ -133,7 +133,7 @@ export default function NewTaskForm() {
                         field.onChange(level);
                       }}
                     >
-                      {level === 1 ? "Easy" : level === 2 ? "Medium" : "Hard"}
+                      {level === 1 ? "Facile" : level === 2 ? "Moyen" : "Difficile"}
                     </Button>
                   ))}
                 </div>
@@ -147,7 +147,7 @@ export default function NewTaskForm() {
             name="energyCost"
             render={({ field }) => (
               <FormItem>
-                <FormLabel className="text-neutral-600">Energy Cost</FormLabel>
+                <FormLabel className="text-neutral-600">Coût en Énergie</FormLabel>
                 <div className="flex items-center">
                   <FormControl>
                     <Slider
@@ -175,23 +175,23 @@ export default function NewTaskForm() {
             name="category"
             render={({ field }) => (
               <FormItem>
-                <FormLabel className="text-neutral-600">Category (Optional)</FormLabel>
+                <FormLabel className="text-neutral-600">Catégorie (Optionnel)</FormLabel>
                 <Select
                   onValueChange={field.onChange}
                   value={field.value || "none"}
                 >
                   <FormControl>
                     <SelectTrigger className="w-full px-3 py-2 border border-neutral-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
-                      <SelectValue placeholder="Select a category" />
+                      <SelectValue placeholder="Sélectionner une catégorie" />
                     </SelectTrigger>
                   </FormControl>
                   <SelectContent>
-                    <SelectItem value="none">Select a category</SelectItem>
-                    <SelectItem value="work">Work</SelectItem>
-                    <SelectItem value="personal">Personal</SelectItem>
-                    <SelectItem value="health">Health</SelectItem>
-                    <SelectItem value="home">Home</SelectItem>
-                    <SelectItem value="learning">Learning</SelectItem>
+                    <SelectItem value="none">Sélectionner une catégorie</SelectItem>
+                    <SelectItem value="work">Travail</SelectItem>
+                    <SelectItem value="personal">Personnel</SelectItem>
+                    <SelectItem value="health">Santé</SelectItem>
+                    <SelectItem value="home">Maison</SelectItem>
+                    <SelectItem value="learning">Apprentissage</SelectItem>
                   </SelectContent>
                 </Select>
                 <FormMessage />
@@ -212,7 +212,7 @@ export default function NewTaskForm() {
                 <line x1="5" y1="12" x2="19" y2="12"></line>
               </svg>
             )}
-            Add Task
+            Ajouter la Tâche
           </Button>
         </form>
       </Form>
