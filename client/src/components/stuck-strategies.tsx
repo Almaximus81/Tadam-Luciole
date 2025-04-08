@@ -14,7 +14,7 @@ export default function StuckStrategies({ onStrategySelect }: StuckStrategiesPro
           <path d="M9 9h.01"></path>
           <path d="M15 9h.01"></path>
         </svg>
-        Tu es bloqué ?
+        Tu es bloqué·e ?
       </h2>
       
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">

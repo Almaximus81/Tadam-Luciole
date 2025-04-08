@@ -70,7 +70,7 @@ export const strategies = {
         <li>Ou continue avec la nouvelle tâche si tu es dans le flow</li>
       </ul>
     `,
-    tip: "Le changement de tâche peut être stratégique pour les cerveaux TDAH. Ton objectif est la productivité globale, pas de te forcer à accomplir une seule tâche quand tu es bloqué."
+    tip: "Le changement de tâche peut être stratégique pour les cerveaux TDAH. Ton objectif est la productivité globale, pas de te forcer à accomplir une seule tâche quand tu es bloqué·e."
   }
 };
 
