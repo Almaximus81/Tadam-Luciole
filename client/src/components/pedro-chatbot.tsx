@@ -41,7 +41,7 @@ const pedroResponses = {
     "Un petit pas pour toi, un grand pas pour ta crédibilité d'adulte fonctionnel.",
     "Range 3 trucs et tu seras promu·e Capitaine de la Légion de la Propreté Suprême.",
     "Range un objet. Tu gagneras +10 en dignité et +3 en fierté intérieure. Et si tu en ranges 5 tu seras carrément une légende !",
-    "Maximus avait une épée. Toi, t'as un balai, du aspiro robot ou une éponge… Chacun est une arme pour établir fièrement ta légende moderne.",
+    "Maximus avait une épée. Toi, t'as un balai, un aspiro robot ou une éponge… Chacun est une arme pour établir fièrement ta légende moderne.",
     "La motivation vient en marchant. Ou en dansant. Peu importe, du moment que tu réunis les chaussettes orphelines."
   ]
 };
