@@ -14,7 +14,7 @@ export default function CompletedTasks({ tasks }: CompletedTasksProps) {
     try {
       return formatDistanceToNow(new Date(date), { addSuffix: true });
     } catch (error) {
-      return "recently";
+      return "récemment";
     }
   };
 
@@ -25,7 +25,7 @@ export default function CompletedTasks({ tasks }: CompletedTasksProps) {
           <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
           <polyline points="22 4 12 14.01 9 11.01"></polyline>
         </svg>
-        Completed Today
+        Terminées Aujourd'hui
       </h2>
       
       {/* Empty state */}
@@ -40,7 +40,7 @@ export default function CompletedTasks({ tasks }: CompletedTasksProps) {
             <line x1="12" y1="9" x2="12" y2="13"></line>
             <line x1="12" y1="17" x2="12.01" y2="17"></line>
           </svg>
-          <p>No completed tasks yet. You can do it!</p>
+          <p>Aucune tâche terminée pour le moment. Vous pouvez le faire !</p>
         </motion.div>
       )}
       
@@ -70,7 +70,7 @@ export default function CompletedTasks({ tasks }: CompletedTasksProps) {
                         <path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"></path>
                         <rect x="9" y="11" width="6" height="8" rx="1"></rect>
                       </svg>
-                      {task.energyCost}% energy
+                      {task.energyCost}% d'énergie
                     </span>
                     
                     {task.category && (

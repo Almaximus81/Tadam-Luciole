@@ -10,7 +10,7 @@ export default function EnergyMeter({ energy, isMobile = false }: EnergyMeterPro
     return (
       <div className="bg-white rounded-lg p-4 shadow-md">
         <div className="flex items-center justify-between mb-1">
-          <span className="text-neutral-600 font-medium">Daily Energy</span>
+          <span className="text-neutral-600 font-medium">Énergie Quotidienne</span>
           <span className="text-secondary font-bold">{energy}%</span>
         </div>
         <Progress 
@@ -24,7 +24,7 @@ export default function EnergyMeter({ energy, isMobile = false }: EnergyMeterPro
 
   return (
     <div className="mr-2">
-      <span className="text-white text-sm font-medium">Energy</span>
+      <span className="text-white text-sm font-medium">Énergie</span>
       <div className="w-32 h-4 bg-primary-dark rounded-full overflow-hidden">
         <Progress 
           value={energy} 

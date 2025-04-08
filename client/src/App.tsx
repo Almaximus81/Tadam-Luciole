@@ -5,6 +5,7 @@ import { Toaster } from "@/components/ui/toaster";
 import NotFound from "@/pages/not-found";
 import Home from "@/pages/home";
 import { MotionConfig } from "framer-motion";
+import PedroChatButton from "@/components/pedro-chat-button";
 
 function Router() {
   return (
@@ -20,6 +21,7 @@ function App() {
     <QueryClientProvider client={queryClient}>
       <MotionConfig reducedMotion="user">
         <Router />
+        <PedroChatButton />
         <Toaster />
       </MotionConfig>
     </QueryClientProvider>

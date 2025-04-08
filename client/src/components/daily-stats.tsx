@@ -20,7 +20,7 @@ export default function DailyStats({ completedCount, remainingCount, energySpent
           <line x1="12" y1="20" x2="12" y2="4"></line>
           <line x1="6" y1="20" x2="6" y2="14"></line>
         </svg>
-        Daily Stats
+        Statistiques Quotidiennes
       </h2>
       
       <ul className="space-y-3">
@@ -30,7 +30,7 @@ export default function DailyStats({ completedCount, remainingCount, energySpent
           animate={{ opacity: 1, x: 0 }}
           transition={{ delay: 0.1 }}
         >
-          <span className="text-neutral-600">Tasks Completed</span>
+          <span className="text-neutral-600">Tâches Terminées</span>
           <span className="font-semibold text-primary">{completedCount}</span>
         </motion.li>
         <motion.li 
@@ -39,7 +39,7 @@ export default function DailyStats({ completedCount, remainingCount, energySpent
           animate={{ opacity: 1, x: 0 }}
           transition={{ delay: 0.2 }}
         >
-          <span className="text-neutral-600">Tasks Remaining</span>
+          <span className="text-neutral-600">Tâches Restantes</span>
           <span className="font-semibold text-secondary">{remainingCount}</span>
         </motion.li>
         <motion.li 
@@ -48,7 +48,7 @@ export default function DailyStats({ completedCount, remainingCount, energySpent
           animate={{ opacity: 1, x: 0 }}
           transition={{ delay: 0.3 }}
         >
-          <span className="text-neutral-600">Energy Spent</span>
+          <span className="text-neutral-600">Énergie Dépensée</span>
           <span className="font-semibold text-teal">{energySpent}%</span>
         </motion.li>
       </ul>
@@ -59,13 +59,13 @@ export default function DailyStats({ completedCount, remainingCount, energySpent
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.4 }}
       >
-        <h3 className="font-medium text-neutral-700 mb-2">Completion Progress</h3>
+        <h3 className="font-medium text-neutral-700 mb-2">Progression des Tâches</h3>
         <Progress 
           value={completionPercentage} 
           variant="accent"
           className="h-4 bg-neutral-200 rounded-full overflow-hidden transition-all duration-500 ease-out"
         />
-        <div className="text-right mt-1 text-sm text-neutral-500">{completionPercentage}% done</div>
+        <div className="text-right mt-1 text-sm text-neutral-500">{completionPercentage}% terminé</div>
       </motion.div>
     </div>
   );

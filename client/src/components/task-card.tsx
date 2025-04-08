@@ -38,7 +38,7 @@ export default function TaskCard({ task, onTaskCompleted }: TaskCardProps) {
     },
     onError: (error) => {
       toast({
-        title: "Failed to complete task",
+        title: "Erreur lors de la complétion de la tâche",
         description: `${error}`,
         variant: "destructive"
       });
@@ -53,13 +53,13 @@ export default function TaskCard({ task, onTaskCompleted }: TaskCardProps) {
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ['/api/tasks'] });
       toast({
-        title: "Task deleted",
-        description: `"${task.name}" has been removed from your tasks.`
+        title: "Tâche supprimée",
+        description: `"${task.name}" a été retirée de votre liste de tâches.`
       });
     },
     onError: (error) => {
       toast({
-        title: "Failed to delete task",
+        title: "Erreur lors de la suppression de la tâche",
         description: `${error}`,
         variant: "destructive"
       });
@@ -71,7 +71,7 @@ export default function TaskCard({ task, onTaskCompleted }: TaskCardProps) {
   };
 
   const handleDelete = () => {
-    if (confirm("Are you sure you want to delete this task?")) {
+    if (confirm("Êtes-vous sûr de vouloir supprimer cette tâche ?")) {
       deleteMutation.mutate();
     }
   };
@@ -106,7 +106,7 @@ export default function TaskCard({ task, onTaskCompleted }: TaskCardProps) {
           onClick={handleComplete}
           disabled={completeMutation.isPending}
           className="mt-1 flex-shrink-0 rounded-full w-5 h-5 border-2 border-primary hover:bg-primary-light/20 transition-colors"
-          aria-label="Complete task"
+          aria-label="Terminer la tâche"
         >
           {completeMutation.isPending && (
             <span className="flex h-full w-full items-center justify-center">
@@ -124,7 +124,7 @@ export default function TaskCard({ task, onTaskCompleted }: TaskCardProps) {
                 <path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"></path>
                 <rect x="9" y="11" width="6" height="8" rx="1"></rect>
               </svg>
-              {task.energyCost}% energy
+              {task.energyCost}% d'énergie
             </span>
             
             {task.category && (
@@ -143,7 +143,7 @@ export default function TaskCard({ task, onTaskCompleted }: TaskCardProps) {
             onClick={handleDelete}
             disabled={deleteMutation.isPending}
             className="text-neutral-400 hover:text-rose-500 transition-colors"
-            aria-label="Delete task"
+            aria-label="Supprimer la tâche"
           >
             <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
               <polyline points="3 6 5 6 21 6"></polyline>
